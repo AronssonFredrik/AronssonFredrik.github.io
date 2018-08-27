@@ -1,14 +1,15 @@
 <template>
     <div>
         <!-- for each client -->
-        <div v-for="(client, index) in content">
+        <div v-for="(client, index) in content" :key="index">
             <!-- for each showcase -->
-            <section v-for="(showcase, index) in client">
+            <section v-for="(showcase, index) in client" :key="index">
                 <div 
                 class="container flex-of-m"
                 v-for="(teaser, index, val) in showcase"
                 v-if="teaser.homepage"
                 :class="{reverse: val % 2 === 0}"
+                :key="val"
                 >
                     <div class="figure">
                         <img :src="teaser.teaser.img" :alt="teaser.teaser.alt" itemprop="image">

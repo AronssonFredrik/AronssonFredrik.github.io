@@ -3,6 +3,7 @@
         <div 
         v-for="(client, index) in client"
         v-if="index === $route.params.client"
+        :key="index"
         >
             <Jumbotron :content="client.jumbotron"></Jumbotron>
             <Section :content="client.sections"></Section>

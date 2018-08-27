@@ -3,13 +3,13 @@
         <h2 class="section-title">{{content.sectionTitle}}</h2>
         <div class="container flex-of-m">
             <div 
-                v-for="(exp, idx) in content.bundle">
+                v-for="(exp, idx) in content.bundle" :key="idx">
                 <h4>{{content.title}}</h4>
                 <p>
-                    <i class="lnr lnr-apartment" aria-hidden="true"></i></i>
+                    <i class="lnr lnr-apartment" aria-hidden="true"></i>
                     {{exp.worksFor}}
                 <br>
-                <i class="lnr lnr-earth" aria-hidden="true"></i></i>
+                <i class="lnr lnr-earth" aria-hidden="true"></i>
                     {{exp.workLocation}}
                 <br>
                     <i class="lnr lnr-calendar-full" aria-hidden="true"></i>

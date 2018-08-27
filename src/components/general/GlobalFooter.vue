@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="container">
-            <p v-for="msg in message">{{msg}}</p>
+            <p v-for="msg in message" :key="msg">{{msg}}</p>
         </div>
     </footer>
 </template>

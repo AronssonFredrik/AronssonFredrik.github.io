@@ -4,11 +4,7 @@
             <router-link to="/">
                 <h1>{{siteName}}</h1>
             </router-link>
-
-
-            <router-link to="/case">Cases</router-link>
-            <router-link to="/error">404-page</router-link>
-
+            <router-link to="/kaspersky-lab">Kaspersky</router-link>
         </div>
     </header>
 </template>

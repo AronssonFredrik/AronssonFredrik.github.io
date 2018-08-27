@@ -10,9 +10,6 @@
 import Vue from 'vue';
 import GlobalHeader from '@/components/general/GlobalHeader.vue'; 
 import GlobalFooter from '@/components/general/GlobalFooter.vue'; 
-const generalTranslation: {
-  test: 'abc'
-}
 
 export default Vue.extend({
   name: 'home',
@@ -304,12 +301,10 @@ export default Vue.extend({
   },
   created () {
     document.title = this.$route.meta.title + " • " + this.name;
-    document.querySelector('meta[name="description"]').content = this.$route.meta.desc
   },
   watch: {
     '$route' (to, from) {
       document.title = this.$route.meta.title + " • " + this.name;
-      document.querySelector('meta[name="description"]').content = this.$route.meta.desc
     }
   }
 

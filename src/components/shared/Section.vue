@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section v-for="(section, index, val) in content" :class="{reverse: index % 2 === 0}">
+        <section v-for="(section, index, val) in content" :class="{reverse: index % 2 === 0}" :key="val">
             <div class="container flex-of-m"
             :class="section.class">
                 <div class="figure" v-if="section.img">
@@ -9,9 +9,9 @@
                 <div>
                     <h2 itemprop="name">{{ section.title }}</h2>
                     <div itemprop="description"> 
-                        <p v-for="p in section.paragraph" v-html="p"> </p>
+                        <p v-for="p in section.paragraph" v-html="p" :key="p"> </p>
                         <ul v-if="section.list">
-                            <li v-for="list in section.list" v-html="list"></li>
+                            <li v-for="list in section.list" v-html="list" :key="list"></li>
                         </ul>
                     </div>
                     <p v-if="section.button">
