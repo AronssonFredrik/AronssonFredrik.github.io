@@ -1,5 +1,5 @@
 <template>
-    <section class="skills">
+    <section id="skills">
         <h2 class="section-title">{{content.sectionTitle}}</h2>
         <div class="row" v-for="(skill, idx) in content.bundle" :key="idx">
             <div class="container ">
@@ -18,9 +18,9 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Experience',
-  props: {
-    content: Object,
-  },
+    name: 'Skill',
+    props: {
+        content: Object,
+    }
 });
 </script>

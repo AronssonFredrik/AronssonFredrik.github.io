@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header id="header">
         <div class="container">
             <router-link to="/">
                 <h1>{{siteName}}</h1>

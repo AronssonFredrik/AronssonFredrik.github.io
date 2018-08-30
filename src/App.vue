@@ -11,6 +11,11 @@ import Vue from 'vue';
 import GlobalHeader from '@/components/general/GlobalHeader.vue'; 
 import GlobalFooter from '@/components/general/GlobalFooter.vue'; 
 
+const scroll = {
+    currentLoc: window.scrollY,
+
+}
+
 export default Vue.extend({
   name: 'home',
   components: {
@@ -307,8 +312,6 @@ export default Vue.extend({
       document.title = this.$route.meta.title + " • " + this.name;
     }
   }
-
-
 });
 </script>
 

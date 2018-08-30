@@ -7,9 +7,10 @@
                     <h4>{{ content.teaser.subHeading }}</h4>
                 </div>
                 <a 
-                    href="#letsScroll" 
+                    component="Experience"
                     class="subHeadingScroll" 
                     v-if="content.scroll"
+                    v-on:click="goTo('Experience')"
                     >Scroll  to learn more</a>
             </div>
         </div>
@@ -19,12 +20,45 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { setInterval, setTimeout } from 'timers';
+import { error } from 'util';
+
+function frame(toGo: any) {
+    if (toGo != undefined){
+        if (document.documentElement.scrollTop != toGo) {
+            console.log(toGo)
+            document.documentElement.scrollTop+=1
+        }
+    }
+}
+
 
 export default Vue.extend({
   name: 'Jumbotron',
   props: {
     content: Object,
   },
+    created() {
+    },
+    methods: {
+        goTo: function(toSection: String) {
+            var scrollOffset = 93               // document.getElementById('header')
+            var something = []
+            for (var num in this.$parent.$children) {
+                something.push({
+                    component: this.$parent.$children[num].$options.name,
+                    topOffset: this.$parent.$children[num].$el.offsetTop
+                })
+            }
+
+            window.scroll({
+                top: something[0].topOffset - scrollOffset,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
+    }
+
 });
 </script>
 <style lang="sass">
