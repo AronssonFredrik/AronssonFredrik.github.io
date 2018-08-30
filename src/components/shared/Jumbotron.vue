@@ -42,17 +42,25 @@ export default Vue.extend({
     },
     methods: {
         goTo: function(toSection: String) {
-            var scrollOffset = 93               // document.getElementById('header')
-            var something = []
+            var scrollOffset = 93               // document.getElementById('header').outerHeight(true) <-- need to get offset from header
+            var component = []
             for (var num in this.$parent.$children) {
-                something.push({
-                    component: this.$parent.$children[num].$options.name,
-                    topOffset: this.$parent.$children[num].$el.offsetTop
+                component.push({
+                    name: this.$parent.$children[num].$options.name,
+                    offset: this.$parent.$children[num].$el.offsetTop
                 })
             }
-
+            component.sort(
+                function(a,b){
+                    if (a.offset < b.offset)
+                        return -1
+                    if (a.offset > b.offset)
+                        return 1
+                    return 0
+                }
+            )
             window.scroll({
-                top: something[0].topOffset - scrollOffset,
+                top: component[1].offset - scrollOffset,
                 left: 0,
                 behavior: 'smooth'
             })
