@@ -4,7 +4,7 @@
         <div class="container flex-of-m">
             <div 
                 v-for="(exp, idx) in content.bundle" :key="idx">
-                <h4>{{content.title}}</h4>
+                <h4>{{exp.title}}</h4>
                 <p>
                     <i class="lnr lnr-apartment" aria-hidden="true"></i>
                     {{exp.worksFor}}

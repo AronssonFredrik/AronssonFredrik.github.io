@@ -258,27 +258,43 @@ export default Vue.extend({
                   type: [
                       {
                           name: "Sass",
-                          workExp: 3,
-                          personalExp: 5,
-                          interest: 5
+                          level : 
+                              {
+                                workExp: 3,
+                                personalExp: 5,
+                                interest: 5
+                              }
+                          
                       },
                       {
                           name: "jQuery",
-                          workExp: 5,
-                          personalExp: 5,
-                          interest: 5
+                          level : 
+                              {
+                                workExp: 5,
+                                personalExp: 5,
+                                interest: 5
+                              }
+                          
                       },
                       {
                           name: "AngularJS",
-                          workExp: 3,
-                          personalExp: 4,
-                          interest: 5
+                          level : 
+                              {
+                                workExp: 3,
+                                personalExp: 4,
+                                interest: 5
+                              }
+                          
                       },
                       {
                           name: "vue.js",
-                          workExp: 1,
-                          personalExp: 3,
-                          interest: 5
+                          level : 
+                              {
+                                workExp: 1,
+                                personalExp: 3,
+                                interest: 5
+                              }
+                          
                       }
                   ]
               },
@@ -287,15 +303,22 @@ export default Vue.extend({
                   type: [
                       {
                           name: "SDL Tridion",
-                          workExp: 5,
-                          personalExp: 5,
-                          interest: 5
+                          level : 
+                              {
+                                workExp: 5,
+                                personalExp: 5,
+                                interest: 5
+                              }
+                          
                       },
                       {
                           name: "Craft CMS",
-                          workExp: 1,
-                          personalExp: 4,
-                          interest: 3
+                          level : 
+                              {
+                                workExp: 1,
+                                personalExp: 3,
+                                interest: 4
+                              }
                       }
                   ]
               }

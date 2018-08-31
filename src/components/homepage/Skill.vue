@@ -6,7 +6,18 @@
                 <h4>{{skill.title}}</h4>
                 <div class="flex-of-m">
                     <div v-for="(type, idx) in skill.type" :key="idx">
-                        <p>{{type.name}}</p>
+                        <h5>{{type.name}}</h5>
+                        <div v-for="(level, idx) in type.level" :key="idx">
+                            <p v-repeat="level">
+                                {{idx}} : {{level}}
+                            </p>
+                        </div>
+                        <p>
+                            {{type.personalExp}}
+                        </p>
+                            <!-- workExp: 3,
+                            personalExp: 5,
+                            interest: 5 -->
                     </div>
                 </div>
             </div>
