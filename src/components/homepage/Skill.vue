@@ -7,17 +7,15 @@
                 <div class="flex-of-m">
                     <div v-for="(type, idx) in skill.type" :key="idx">
                         <h5>{{type.name}}</h5>
-                        <div v-for="(level, idx) in type.level" :key="idx">
-                            <p v-repeat="level">
-                                {{idx}} : {{level}}
-                            </p>
+                        <div v-for="(level, idx) in type.level" :key="idx" class="level">
+                            <p>{{translation.experience[idx]}}</p>
+                            <div 
+                                v-bind:class="['repeat-' + level, idx]"
+                                v-bind:title="translation.experience[idx] + ': ' + translation.level[level]"
+                            >
+                                <span v-for="a in translation.level"></span>
+                            </div>
                         </div>
-                        <p>
-                            {{type.personalExp}}
-                        </p>
-                            <!-- workExp: 3,
-                            personalExp: 5,
-                            interest: 5 -->
                     </div>
                 </div>
             </div>
@@ -27,11 +25,51 @@
 
 <script lang="ts">
 import Vue from 'vue';
-
 export default Vue.extend({
     name: 'Skill',
     props: {
         content: Object,
+    },
+    data() {
+        return {
+            translation: {
+                "experience": {
+                    "personalExp": "Personal Experience",
+                    "interest": "Personal Interest",
+                    "workExp": "Work-related Experience"
+                },
+                "level": {
+                    1: 'Beginner',
+                    2: 'Intermediate',
+                    3: 'Advanced',
+                    4: 'Expert'
+                }
+            }
+        }
     }
 });
 </script>
+<style lang="sass">
+@import '../../assets/css/variables'
+#skills
+    h4
+        padding: $baseSize
+    .level
+        p
+            padding: ($baseSize / 2) 0 0
+        > div
+            @for $i from 1 through 5 
+                &.repeat-#{$i} 
+                    span:nth-child(-n+#{$i})
+                        border: $blue 1px solid;
+                        background: $blue;
+            span
+                width: $baseSize;
+                height: $baseSize * .5;
+                margin: ($baseSize / 6) ($baseSize / 4);
+                display: inline-block;
+                border: $blue 1px solid;
+                border-radius: 2px
+
+
+</style>

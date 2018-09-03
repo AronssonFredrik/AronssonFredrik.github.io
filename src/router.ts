@@ -28,12 +28,18 @@ export default new Router({
     {
       path: '/:client/:project',
       component: () => import('./views/Project.vue')
-},
+    },
     {
       path: '*',
       name: 'notfound',
       component: () => import('./views/404.vue')
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })
 
