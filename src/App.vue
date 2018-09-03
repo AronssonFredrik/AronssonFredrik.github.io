@@ -261,18 +261,17 @@ export default Vue.extend({
                           level : 
                               {
                                 workExp: 3,
-                                personalExp: 5,
-                                interest: 5
+                                personalExp: 4,
+                                interest: 4
                               }
-                          
                       },
                       {
                           name: "jQuery",
                           level : 
                               {
-                                workExp: 5,
-                                personalExp: 5,
-                                interest: 5
+                                workExp: 4,
+                                personalExp: 4,
+                                interest: 4
                               }
                           
                       },
@@ -280,19 +279,19 @@ export default Vue.extend({
                           name: "AngularJS",
                           level : 
                               {
-                                workExp: 3,
+                                workExp: 2,
                                 personalExp: 4,
-                                interest: 5
+                                interest: 4
                               }
                           
                       },
                       {
-                          name: "vue.js",
+                          name: "Vue.js",
                           level : 
                               {
                                 workExp: 1,
                                 personalExp: 3,
-                                interest: 5
+                                interest: 4
                               }
                           
                       }
@@ -305,9 +304,9 @@ export default Vue.extend({
                           name: "SDL Tridion",
                           level : 
                               {
-                                workExp: 5,
-                                personalExp: 5,
-                                interest: 5
+                                workExp: 4,
+                                personalExp: 4,
+                                interest: 4
                               }
                           
                       },
@@ -317,7 +316,7 @@ export default Vue.extend({
                               {
                                 workExp: 1,
                                 personalExp: 3,
-                                interest: 4
+                                interest: 3
                               }
                       }
                   ]
