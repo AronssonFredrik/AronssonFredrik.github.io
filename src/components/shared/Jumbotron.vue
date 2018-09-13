@@ -6,12 +6,7 @@
                     <h2>{{ content.teaser.heading }}</h2>
                     <h4>{{ content.teaser.subHeading }}</h4>
                 </div>
-                <a 
-                    component="Experience"
-                    class="subHeadingScroll" 
-                    v-if="content.scroll"
-                    v-on:click="goTo('Experience')"
-                    >Scroll  to learn more</a>
+                <a component="Experience" class="subHeadingScroll" v-if="content.scroll" v-on:click="goTo('Experience')"></a>
             </div>
         </div>
         <div class="subHeaderOverlay" v-if="content.overlay"></div>
@@ -21,8 +16,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import { setInterval, setTimeout } from 'timers';
-import { error } from 'util';
-
 function frame(toGo: any) {
     if (toGo != undefined){
         if (document.documentElement.scrollTop != toGo) {
@@ -31,8 +24,6 @@ function frame(toGo: any) {
         }
     }
 }
-
-
 export default Vue.extend({
   name: 'Jumbotron',
   props: {

@@ -4,12 +4,13 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
-
 Vue.prototype.$label = {
+  footer: [
+    "Vat liable since October 2014",
+    "Website developed with vueJS, Sass, etc",
+    "Sent from App.vue"
+  ],
+  siteName: 'Fredrik Aronsson',
   readMore: 'Read more →',
   preview: 'Preview now ↝',
   translation: {
@@ -26,3 +27,8 @@ Vue.prototype.$label = {
     }
   }
 }
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

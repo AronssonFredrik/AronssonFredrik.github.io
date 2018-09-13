@@ -10,7 +10,7 @@
                         <h2 itemprop="name">{{ teaser.teaser.title }}</h2>
                         <p itemprop="description"> {{teaser.teaser.desc }}…</p>
                         <p>
-                            <router-link class="CTA" :to="teaser.teaser.button.url">{{teaser.teaser.button.text}}</router-link>
+                            <router-link class="CTA" :to="teaser.teaser.button.href">{{teaser.teaser.button.text || $label.readMore}}</router-link>
                         </p>
                     </div>
                 </div>

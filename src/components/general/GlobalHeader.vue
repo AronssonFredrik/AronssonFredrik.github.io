@@ -2,7 +2,7 @@
     <header id="header">
         <div class="container">
             <router-link to="/">
-                <h1>{{siteName}}</h1>
+                <h1>{{$label.siteName}}</h1>
             </router-link>
             <router-link to="/kaspersky-lab">Kaspersky</router-link>
         </div>
@@ -12,13 +12,7 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-    name: 'GlobalHeader',
-    props: {
-        siteName: {
-            type: String,
-            required: true
-        }
-    }
+    name: 'GlobalHeader'
 });
 </script>
 <style lang="sass">

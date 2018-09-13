@@ -15,24 +15,26 @@
                         </ul>
                     </div>
                     <p v-if="section.button">
-                        <a class="CTA" 
-                           :href="section.button.href"
-                           :target="section.button.target || '_self'"
-                        >
-                            {{section.button.text}}
-                        </a>
+                        <Cta button="section.button"/>
                     </p>
                 </div>
             </div>
         </section>
     </div>
 </template>
-
 <script lang="ts">
-import Vue from 'vue';
 
+
+import Cta from '@/components/item/Cta.vue';
+
+
+
+import Vue from 'vue';
 export default Vue.extend({
   name: 'Showcase',
+  components: {
+    Cta,
+  },
   props: {
     content: Array
   }

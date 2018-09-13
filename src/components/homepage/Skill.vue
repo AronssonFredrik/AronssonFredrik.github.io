@@ -8,12 +8,12 @@
                     <div v-for="(type, idx) in skill.type" :key="idx">
                         <h5>{{type.name}}</h5>
                         <div v-for="(level, idx) in type.level" :key="idx" class="level">
-                            <p>{{translation.experience[idx]}}</p>
+                            <p>{{$label.translation.experience[idx]}}</p>
                             <div class="experience" v-bind:class="['repeat-' + level, idx]">
                                 <div class="tool-tip">
-                                    {{translation.experience[idx] + ': ' + translation.level[level]}}
+                                    {{$label.translation.experience[idx] + ': ' + $label.translation.level[level]}}
                                 </div>
-                                <span v-for="eachLevel in translation.level" :key="eachLevel"></span>
+                                <span v-for="eachLevel in $label.translation.level" :key="eachLevel"></span>
                             </div>
                         </div>
                     </div>
@@ -22,37 +22,18 @@
         </div>
     </section>
 </template>
-
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
     name: 'Skill',
     props: {
         content: Object,
-    },
-    data() {
-        return {
-            translation: {
-                "experience": {
-                    "personalExp": "Personal Experience",
-                    "interest": "Personal Interest",
-                    "workExp": "Work-related Experience"
-                },
-                "level": {
-                    1: 'Beginner',
-                    2: 'Intermediate',
-                    3: 'Advanced',
-                    4: 'Expert'
-                }
-            }
-        }
     }
 });
 </script>
 <style lang="sass">
 @import '../../assets/css/variables'
 #skills
-
     h4
         padding: $baseSize
     .level

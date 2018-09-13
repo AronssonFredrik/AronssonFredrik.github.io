@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="container">
-            <p v-for="msg in message" :key="msg">{{msg}}</p>
+            <p v-for="text in $label.footer" :key="text">{{ text }}</p>
         </div>
     </footer>
 </template>
@@ -9,13 +9,7 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-    name: 'GlobalFooter',
-    props: {
-        message: {
-            type: Array,
-            required: true
-        }
-    }
+    name: 'GlobalFooter'
 });
 </script>
 <style lang="sass">

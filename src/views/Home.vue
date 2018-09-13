@@ -12,7 +12,7 @@ import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue'; 
 import Experience from '@/components/homepage/Experience.vue'; 
 import Skill from '@/components/homepage/Skill.vue'; 
-import Showcase from '@/components/Showcase.vue'; 
+import Showcase from '@/components/homepage/Showcase.vue'; 
 export default Vue.extend({
   name: 'home',
   components: {

@@ -17,7 +17,6 @@ import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Showcase from '@/components/shared/Showcase.vue'; 
 import Section from '@/components/shared/Section.vue'; 
-
 export default Vue.extend({
   name: 'Client',
   components: {
@@ -27,6 +26,6 @@ export default Vue.extend({
   },
   props: {
     client: Object
-  },
+  }
 });
 </script>

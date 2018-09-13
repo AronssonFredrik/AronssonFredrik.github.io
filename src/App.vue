@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <GlobalHeader :siteName="name"></GlobalHeader>
+    <GlobalHeader></GlobalHeader>
     <router-view :client="client" :experience="experience" :skill="skill"/>
-    <GlobalFooter :message="footer"></GlobalFooter>
+    <GlobalFooter></GlobalFooter>
   </div>
 </template>
 
@@ -10,12 +10,6 @@
 import Vue from 'vue';
 import GlobalHeader from '@/components/general/GlobalHeader.vue'; 
 import GlobalFooter from '@/components/general/GlobalFooter.vue'; 
-
-const scroll = {
-    currentLoc: window.scrollY,
-
-}
-
 export default Vue.extend({
   name: 'home',
   components: {
@@ -25,11 +19,6 @@ export default Vue.extend({
   data() {
     return {
       name: "Fredrik Aronsson",
-      footer: [
-        "Vat liable since October 2014",
-        "Website developed with vueJS, Sass, etc",
-        "Sent from App.vue"
-      ],
       client: {
         "kaspersky-lab": {
           jumbotron: {
@@ -51,8 +40,7 @@ export default Vue.extend({
                   img: require('@/assets/img/next-gen-kaspersky-antivirus.png'),
                   alt: "test",
                   button: {
-                    text: "abc123",
-                    url: "/kaspersky-lab/next-generation-website"
+                    href: "/kaspersky-lab/next-generation-website"
                   }
               },
               jumbotron: {
@@ -118,8 +106,7 @@ export default Vue.extend({
                   img: require('@/assets/img/landing-page-responsive-design.png'),
                   alt: "test",
                   button: {
-                    text: "abc123",
-                    url: "/kaspersky-lab/landing-pages"
+                    href: "/kaspersky-lab/landing-pages"
                   }
               },
               jumbotron: {
@@ -164,8 +151,7 @@ export default Vue.extend({
                   img: require('@/assets/img/microdata-improved-serp.png'),
                   alt: "test",
                   button: {
-                    text: "Read More →",
-                    url: "/kaspersky-lab/beneft-from-microdata"
+                    href: "/kaspersky-lab/beneft-from-microdata"
                   }
               },
               jumbotron: {
