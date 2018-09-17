@@ -28,10 +28,10 @@ export default Vue.extend({
   },
   created() {
     var meta = this.client[this.$route.params.client].meta
-    document.title = 
-      meta.title  
-      + this.$route.meta.siteName;
-    document.querySelector('meta[name="description"]').setAttribute("content", meta.description)
+    var desc = document.querySelector('meta[name="description"]')
+    desc !== null 
+      ? desc.setAttribute("content", meta.description)
+      : document.createElement('meta').setAttribute("content", meta.description)
   }
 });
 </script>

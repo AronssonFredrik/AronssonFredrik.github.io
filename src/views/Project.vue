@@ -29,8 +29,11 @@ export default Vue.extend({
   },
   mounted () {
     var meta = this.client[this.$route.params.client].projects[this.$route.params.project].meta
-    document.title = meta.title + this.$route.meta.siteName;
-    document.querySelector('meta[name="description"]').setAttribute("content", meta.description)
+    var desc = document.querySelector('meta[name="description"]')
+    document.title = meta.title + this.$route.meta.siteName
+    desc !== null 
+      ? desc.setAttribute("content", meta.description)
+      : document.createElement('meta').setAttribute("content", meta.description)
   }
 });
 </script>
