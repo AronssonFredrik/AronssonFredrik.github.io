@@ -33,12 +33,10 @@ export default new Router({
       }
     },
     {
-      path: '*',
+      path: '/not-found',
+      alias: '*',
       name: 'notfound',
-      component: () => import('./views/404.vue'),
-      meta: {
-        siteName: " • Fredrik Aronsson"
-      }
+      component: () => import('./views/404.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
