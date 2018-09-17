@@ -258,51 +258,64 @@ export default Vue.extend({
                   title: "Front-End Development",
                   type: [
                       {
-                          name: "Sass",
-                          level : 
-                              {
-                                workExp: 3,
-                                personalExp: 4,
-                                interest: 4
-                              }
-                      },
-                      {
-                          name: "jQuery",
-                          level : 
-                              {
-                                workExp: 4,
-                                personalExp: 4,
-                                interest: 4
-                              }
+                        name: "Javascript",
+                        img: require('@/assets/img/skills/icon-javascript.png'),
+                        level : 
+                            {
+                            workExp: 4,
+                            personalExp: 3,
+                            interest: 4
+                            }
                           
                       },
                       {
-                          name: "AngularJS",
-                          level : 
-                              {
-                                workExp: 2,
-                                personalExp: 4,
-                                interest: 4
-                              }
-                          
+                        name: "jQuery",
+                        img: require('@/assets/img/skills/icon-jquery.png'),
+                        level : 
+                            {
+                            workExp: 4,
+                            personalExp: 4,
+                            interest: 4
+                            }
                       },
                       {
-                          name: "Vue.js",
-                          level : 
-                              {
-                                workExp: 1,
-                                personalExp: 3,
-                                interest: 4
-                              }
-                          
+                        name: "Sass",
+                        img: require('@/assets/img/skills/icon-sass.svg'),
+                        level : 
+                            {
+                            workExp: 3,
+                            personalExp: 4,
+                            interest: 4
+                            }
+                      },
+                      {
+                        name: "AngularJS",
+                        img: require('@/assets/img/skills/icon-angular.svg'),
+                        level : 
+                            {
+                            workExp: 2,
+                            personalExp: 4,
+                            interest: 4
+                            }
+                      },
+                      {
+                        name: "Vue.js",
+                        img: require('@/assets/img/skills/icon-vue.png'),
+                        level : 
+                            {
+                            workExp: 1,
+                            personalExp: 3,
+                            interest: 4
+                            }
                       }
                   ]
               },
               {
-                  title: "Content Management Systems",
+                  title: "Content Management Systems (to be removed)?",
                   type: [
                       {
                           name: "SDL Tridion",
+                          img: require('@/assets/img/skills/icon-sdl.png'),
                           level : 
                               {
                                 workExp: 4,
