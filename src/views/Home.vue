@@ -40,9 +40,9 @@ export default Vue.extend({
     }
   },
   mounted () {
-    document.title = 
-      this.$route.meta.title 
-      + this.$route.meta.siteName;
+    var meta = this.$route.meta
+    document.title = meta.title + this.$route.meta.siteName;
+    document.querySelector('meta[name="description"]').setAttribute("content", meta.description)
   }
 });
 </script>

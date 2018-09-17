@@ -1,36 +1,36 @@
 <template>
     <main>
-        <div 
-        v-for="(client, index) in client"
-        v-if="index === $route.params.client"
-        :key="index"
-        >
-            <div v-for="(project, index) in client.projects"
-                v-if="index === $route.params.project"
-                :key="index">
+        <div v-for="(client, index) in client" v-if="index === $route.params.client" :key="index">
+            <div v-for="(project, index) in client.projects" v-if="index === $route.params.project" :key="index">
                 <Jumbotron :content="project.jumbotron"></Jumbotron>
                 <Section :content="project.sections"></Section>
-            </div>            
+            </div>
+            <!-- if project doesn't exist -->
+            <Error v-else></Error>
         </div>
+        <!-- if client doesn't exist -->
+        <Error v-else></Error>
     </main>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Section from '@/components/shared/Section.vue';
+import Error from '@/views/404.vue';
 export default Vue.extend({
   name: 'Client',
   components: {
     Jumbotron,
-    Section
+    Section,
+    Error
   },
   props: {
     client: Object
   },
   mounted () {
-    document.title = 
-      this.client[this.$route.params.client].projects[this.$route.params.project].meta.title 
-      + this.$route.meta.siteName;
+    var meta = this.client[this.$route.params.client].projects[this.$route.params.project].meta
+    document.title = meta.title + this.$route.meta.siteName;
+    document.querySelector('meta[name="description"]').setAttribute("content", meta.description)
   }
 });
 </script>

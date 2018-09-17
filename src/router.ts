@@ -14,7 +14,7 @@ export default new Router({
       component: Home,
       meta: {
         title: 'Freelance Web Developer',
-        desc: 'Gothenburg-based Freelance Web Developer. Fredrik Aronsson focuses on VueJS and CMS solutions.',
+        description: 'Gothenburg-based Freelance Web Developer. Fredrik Aronsson focuses on VueJS and CMS solutions.',
         siteName: " • Fredrik Aronsson"
       }
     },
