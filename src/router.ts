@@ -14,25 +14,31 @@ export default new Router({
       component: Home,
       meta: {
         title: 'Freelance Web Developer',
-        desc: 'Gothenburg-based Freelance Web Developer. Fredrik Aronsson focuses on VueJS and CMS solutions.'
+        desc: 'Gothenburg-based Freelance Web Developer. Fredrik Aronsson focuses on VueJS and CMS solutions.',
+        siteName: " • Fredrik Aronsson"
       }
     },
     {
       path: '/:client',
       component: () => import('./views/Client.vue'),
       meta: {
-        title: 'Cases',
-        desc: 'Cases previously done projects within User Experience and Front-End Development.'
+        siteName: " • Fredrik Aronsson"
       }
     },
     {
       path: '/:client/:project',
-      component: () => import('./views/Project.vue')
+      component: () => import('./views/Project.vue'),
+      meta: {
+        siteName: " • Fredrik Aronsson"
+      }
     },
     {
       path: '*',
       name: 'notfound',
-      component: () => import('./views/404.vue')
+      component: () => import('./views/404.vue'),
+      meta: {
+        siteName: " • Fredrik Aronsson"
+      }
     }
   ],
   scrollBehavior(to, from, savedPosition) {

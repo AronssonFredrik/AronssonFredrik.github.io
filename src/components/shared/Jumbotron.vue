@@ -71,8 +71,7 @@ main
             background: $purple
         &.subHeader
             position: relative
-            height: 100vh
-            min-height: auto
+            min-height: 85vh
             display: flex
             flex-basis: auto
             align-items: center

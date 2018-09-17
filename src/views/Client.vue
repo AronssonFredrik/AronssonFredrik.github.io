@@ -26,6 +26,11 @@ export default Vue.extend({
   },
   props: {
     client: Object
+  },
+  created() {
+    document.title = 
+      this.client[this.$route.params.client].meta.title  
+      + this.$route.meta.siteName;
   }
 });
 </script>

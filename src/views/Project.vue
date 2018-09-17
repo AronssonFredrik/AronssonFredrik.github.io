@@ -10,18 +10,14 @@
                 :key="index">
                 <Jumbotron :content="project.jumbotron"></Jumbotron>
                 <Section :content="project.sections"></Section>
-            </div>
-
-            
+            </div>            
         </div>
     </main>
 </template>
-
 <script lang="ts">
 import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Section from '@/components/shared/Section.vue';
-
 export default Vue.extend({
   name: 'Client',
   components: {
@@ -30,6 +26,11 @@ export default Vue.extend({
   },
   props: {
     client: Object
+  },
+  mounted () {
+    document.title = 
+      this.client[this.$route.params.client].projects[this.$route.params.project].meta.title 
+      + this.$route.meta.siteName;
   }
 });
 </script>

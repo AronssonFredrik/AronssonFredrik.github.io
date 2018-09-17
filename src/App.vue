@@ -21,6 +21,10 @@ export default Vue.extend({
       name: "Fredrik Aronsson",
       client: {
         "kaspersky-lab": {
+          meta: {
+              title: "Kaspersky Lab",
+              description: "Working remotely managing and maintaining 40+ multi-regional websites and executing web content."
+          },
           jumbotron: {
               scroll: true,
               overlay: true,
@@ -32,16 +36,20 @@ export default Vue.extend({
           },
           projects: {
             "next-generation-website": {
-              homepage: true,
-              client: true,
-              teaser: {
-                  title: 'Next Generation Website',
-                  desc: 'A new era has come, the development of a responsive e-commerce website, A/B-testing design ideas and building new buyblock with wider range of pack-options',
-                  img: require('@/assets/img/next-gen-kaspersky-antivirus.png'),
-                  alt: "test",
-                  button: {
-                    href: "/kaspersky-lab/next-generation-website"
-                  }
+                meta: {
+                    title: "Next-Gen Website @ Kaspersky Lab",
+                    description: "Preperation and execution of the next generation website. A/B‐testing a new potential design & developing a buyblock by using backbone.js as framework."
+                },
+                homepage: true,
+                client: true,
+                teaser: {
+                    title: 'Next Generation Website',
+                    desc: 'A new era has come, the development of a responsive e-commerce website, A/B-testing design ideas and building new buyblock with wider range of pack-options',
+                    img: require('@/assets/img/next-gen-kaspersky-antivirus.png'),
+                    alt: "test",
+                    button: {
+                        href: "/kaspersky-lab/next-generation-website"
+                    }
               },
               jumbotron: {
                   scroll: true,
@@ -65,7 +73,6 @@ export default Vue.extend({
                       },
                       button: {
                         href: "https://www.kaspersky.com/renewal-center/home",
-                        text: "Preview it now ↝",
                         target: "_blank"
                       }
                   },
@@ -81,7 +88,7 @@ export default Vue.extend({
                       },
                       button: {
                         href: "https://www.kaspersky.com/business-security/small-business",
-                        text: "Preview it now ↝"
+                        target: "_blank"
                       }
                   },
                   {
@@ -98,6 +105,10 @@ export default Vue.extend({
               ]
             },
             "landing-pages": {
+                meta: {
+                    title: "Landing Pages",
+                    description: "Promoting new product lines and driving awareness & activation around the brand. Landing pages created with crossbrowser and responsive design in mind."
+                },
               homepage: false,
               client: true,
               teaser: {
@@ -143,6 +154,10 @@ export default Vue.extend({
               ]
             },
             "beneft-from-microdata": {
+                meta: {
+                    title: "Improving Search Engine results",
+                    description: "Find out how Kaspersky benefited from using Schema.org microdata to improve the SERP and click-through rate with aggregate rating and pricing!"
+                },
               homepage: false,
               client: true,
               teaser: {
@@ -307,17 +322,8 @@ export default Vue.extend({
                       }
                   ]
               }
-
           ]
       }      
-    }
-  },
-  created () {
-    document.title = this.$route.meta.title + " • " + this.name;
-  },
-  watch: {
-    '$route' (to, from) {
-      document.title = this.$route.meta.title + " • " + this.name;
     }
   }
 });

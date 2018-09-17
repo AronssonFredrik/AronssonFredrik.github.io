@@ -4,6 +4,11 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+const siteConfig = {
+  name: "Fredrik Aronsson"
+}
+
+Vue.prototype.$siteName = 'Fredrik Aronsson'
 Vue.prototype.$label = {
   footer: [
     "Vat liable since October 2014",
@@ -27,7 +32,6 @@ Vue.prototype.$label = {
     }
   }
 }
-
 new Vue({
   router,
   render: h => h(App)

@@ -14,24 +14,17 @@
                             <li v-for="list in section.list" v-html="list" :key="list"></li>
                         </ul>
                     </div>
-                    <p v-if="section.button">
-                        <Cta button="section.button"/>
-                    </p>
+                    <Cta :button="section.button" v-if="section.button"/>
                 </div>
             </div>
         </section>
     </div>
 </template>
 <script lang="ts">
-
-
 import Cta from '@/components/item/Cta.vue';
-
-
-
 import Vue from 'vue';
 export default Vue.extend({
-  name: 'Showcase',
+  name: 'Section',
   components: {
     Cta,
   },

@@ -3,7 +3,7 @@
     <Jumbotron :content="jumbotron"></Jumbotron>
     <Experience :content="experience"></Experience>
     <Skill :content="skill"></skill>
-    <Showcase :content="client"></Showcase>
+    <HomeShowcase :content="client"></HomeShowcase>
   </main>
 </template>
 
@@ -12,14 +12,14 @@ import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue'; 
 import Experience from '@/components/homepage/Experience.vue'; 
 import Skill from '@/components/homepage/Skill.vue'; 
-import Showcase from '@/components/homepage/Showcase.vue'; 
+import HomeShowcase from '@/components/homepage/HomeShowcase.vue'; 
 export default Vue.extend({
   name: 'home',
   components: {
     Jumbotron,
     Experience,
     Skill,
-    Showcase
+    HomeShowcase
   },
   props: {
     client: Object,
@@ -38,6 +38,11 @@ export default Vue.extend({
           }
       }
     }
+  },
+  mounted () {
+    document.title = 
+      this.$route.meta.title 
+      + this.$route.meta.siteName;
   }
 });
 </script>
