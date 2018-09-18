@@ -6,7 +6,6 @@
             <Showcase :content="client"></Showcase>
         </div>
         <!-- if client doesn't exist -->
-        <Error v-else></Error>
     </main>
 </template>
 <script lang="ts">
@@ -14,17 +13,20 @@ import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Showcase from '@/components/shared/Showcase.vue'; 
 import Section from '@/components/shared/Section.vue';
-import Error from '@/views/404.vue';
 export default Vue.extend({
   name: 'Client',
   components: {
     Jumbotron,
     Showcase,
-    Section,
-    Error
+    Section
   },
   props: {
     client: Object
+  },
+  beforeMount() {
+    if (this.client[this.$route.params.client] === undefined) {
+        this.$router.push('/')
+    }
   },
   created() {
     var meta = this.client[this.$route.params.client].meta
