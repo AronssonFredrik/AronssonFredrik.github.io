@@ -54,6 +54,7 @@ export default Vue.extend({
               jumbotron: {
                   scroll: true,
                   overlay: true,
+                  image: require('@/assets/img/page-header/case-next-generation-website.jpg'),
                   classes: 'frontpage',
                   teaser: {
                       heading: "Next Generation website",
@@ -123,6 +124,7 @@ export default Vue.extend({
               jumbotron: {
                   scroll: true,
                   overlay: true,
+                  image: require('@/assets/img/page-header/case-web-project-localization.jpg'),
                   classes: 'frontpage',
                   teaser: {
                       heading: "Landing Pages",
@@ -172,6 +174,7 @@ export default Vue.extend({
               jumbotron: {
                   scroll: true,
                   overlay: true,
+                  image: require('@/assets/img/page-header/case-improve-search-engine-result.png'),
                   classes: 'case',
                   teaser: {
                       heading: "Improving the Search Engine Result",
