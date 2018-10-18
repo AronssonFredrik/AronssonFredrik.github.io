@@ -1,5 +1,7 @@
 <template>
-    <section class="subHeader" :class="[content.classes]">
+    <section class="subHeader" 
+        :class="[content.classes]"
+        :style="{backgroundImage: 'url(' + content.image + ')' }">
         <div class="subHeaderContent">
             <div class="container">
                 <div class="intro">

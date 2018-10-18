@@ -33,10 +33,11 @@ export default new Router({
       }
     },
     {
-      path: '/not-found',
+      path: '/error/page-not-found',
       alias: '*',
       name: 'notfound',
-      component: () => import('./views/404.vue')
+      component: () => import('./views/404.vue'),
+      redirect: '/'
     }
   ],
   scrollBehavior(to, from, savedPosition) {

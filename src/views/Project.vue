@@ -6,31 +6,37 @@
                 <Section :content="project.sections"></Section>
             </div>
             <!-- if project doesn't exist -->
-            <Error v-else></Error>
         </div>
-        <!-- if client doesn't exist -->
-        <Error v-else></Error>
     </main>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Section from '@/components/shared/Section.vue';
-import Error from '@/views/404.vue';
 export default Vue.extend({
-  name: 'Client',
+  name: 'Project',
   components: {
     Jumbotron,
-    Section,
-    Error
+    Section
   },
   props: {
     client: Object
   },
+  beforeMount () {
+    if (this.client[this.$route.params.client] === undefined ||
+        this.client[this.$route.params.client].projects[this.$route.params.project] === undefined) {
+        this.$router.push('/')
+    }
+  },
   mounted () {
-    var meta = this.client[this.$route.params.client].projects[this.$route.params.project].meta
-    document.title = meta.title + this.$route.meta.siteName;
-    document.querySelector('meta[name="description"]').setAttribute("content", meta.description)
+    if (this.$route.params.client !== 'error' && this.$route.params.project !== 'page-not-found'){
+        var meta = this.client[this.$route.params.client].projects[this.$route.params.project].meta
+        var desc = document.querySelector('meta[name="description"]')
+        document.title = meta.title + this.$route.meta.siteName
+        desc !== null 
+        ? desc.setAttribute("content", meta.description)
+        : document.createElement('meta').setAttribute("content", meta.description)
+    }
   }
 });
 </script>

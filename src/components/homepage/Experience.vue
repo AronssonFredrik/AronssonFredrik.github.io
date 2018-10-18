@@ -30,3 +30,8 @@ export default Vue.extend({
   },
 });
 </script>
+<style lang="sass">
+.experience
+    .container
+        text-align: center
+</style>
