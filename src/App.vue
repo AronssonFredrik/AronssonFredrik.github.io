@@ -129,6 +129,88 @@ export default Vue.extend({
                       subHeading: "Promoting events & new product lines."
                   }    
               },
+              slideshow: [
+                  {
+                      title: "My Security Cloud",
+                      paragraph: [
+                          "Media campaign introducing, creating awareness and promoting our new product, Kaspersky Security Cloud."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-mysecuritycloud.png'),
+                        alt: 'Media campaign introducing My Security Cloud'
+                      },
+                      button: {
+                          href: 'http://www.mysecuritycloud.co.uk/',
+                          text: "Preview the Landing Page"
+                      }
+                  },
+                  {
+                      title: "GDPR",
+                      paragraph: [
+                          "GDPR is a new data privacy regulation in EU which will come into force mid-2018. The objective of the landing page was to help businesses handle this new regulation.",
+                          "Succesful initiative and is now part of our standard pages."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-gdpr.png'),
+                        alt: 'Successful initiative creating awareness around GDPR'
+                      },
+                      button: {
+                          href: 'https://www.kaspersky.se/gdpr',
+                          text: "Preview now"
+                      }
+                  },
+                  {
+                      title: "Booklet: Kasper and Sky",
+                      paragraph: [
+                          "Local campaign run in Netherlands introducing a Kaspersky Children book to help parents keep their children safe online. Scope to  target consumers through social media, magazines and newspapers."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-kasper-and-sky.png'),
+                        alt: 'Kasper, Sky and the green Bear'
+                      },
+                      button: {
+                          href: 'https://www.kaspersky.nl/kasper-sky-en-de-groene-beer',
+                          text: "Take a peak"
+                      }
+                  },
+                  {
+                      title: "Unhackable",
+                      paragraph: [
+                          "The campaign was used during Kaspersky Motorsport tour in the Nordics with an objective to drive brand awareness & activiation."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-unhackable.png'),
+                        alt: 'Stay unhackable with Kaspersky Lab'
+                      },
+                      button: {
+                          href: 'https://www.kaspersky.se/unhackable',
+                          text: "Preview now"
+                      }
+                  },
+                  {
+                      title: "Starmus event",
+                      paragraph: [
+                          "Kaspersky sponsored the Starmus event which took place in Norway (June, 2017). The objective was to drive traffic to the Starmus event and increase download rate on our Free Anti-Virus solution.",
+                          "The page has been deactivated as the event already taken place."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-starmus-event.png'),
+                        alt: 'Campaign for Starmus Event'
+                      },
+                      button: false
+                  },
+                  {
+                      title: "In Pista con Kaspersky",
+                      paragraph: [
+                          "A contest campaign where our customers had a chance to win a racing experience. The object was to sell our newly released front-line product."
+                      ],
+                      img: {
+                        path: require('@/assets/img/slideshow/landing-page-inpista-promotion.png'),
+                        alt: 'Contest while promoting new front-line products'
+                      },
+                      button: false
+                  }
+              ],
               sections: [
                   {
                       title: "Cross Browser Compatibility",
