@@ -4,11 +4,11 @@
         <div class="container flex-of-m">
             <div 
                 v-for="(exp, idx) in content.bundle" :key="idx">
-                <h4>{{exp.title}}</h4>
-                <p>
+                <h4>
                     <i class="lnr lnr-apartment" aria-hidden="true"></i>
                     {{exp.worksFor}}
-                <br>
+                </h4>
+                <p>
                 <i class="lnr lnr-earth" aria-hidden="true"></i>
                     {{exp.workLocation}}
                 <br>
@@ -21,17 +21,23 @@
     </section> 
 </template>
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 
 export default Vue.extend({
-  name: 'Experience',
+  name: "Experience",
   props: {
-    content: Object,
-  },
+    content: Object
+  }
 });
 </script>
 <style lang="sass">
+@import '../../assets/css/variables'
+
 .experience
     .container
         text-align: center
+        div
+            width: 33%
+            @media screen and (max-width: $breakpoint-medium)
+                width: 100%
 </style>
