@@ -431,7 +431,7 @@ img
     flex-wrap: wrap
     &.full-width
       > div
-        width: 100%
+        width: 100% !important
     &.reverse 
         flex-direction: row-reverse
         .figure

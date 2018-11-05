@@ -29,22 +29,22 @@ export default Vue.extend({
 .showcase
     .container
         .figure
-            margin-left: -50vw
+            margin-left: calc(-960px/2)
             max-width: 100%
+            img
+                @media screen and (max-width: $breakpoint-medium)
+                  width: calc(100% + 120px)
+                  margin-left: calc(-120px/2)
+                  max-width: none
         .content
             width: 50%
         &.reverse
             .figure
-                margin-right: -50vw
+                margin-right: calc(-960px/2)
                 margin-left: auto
         .figure, .content, &.reverse .figure, &.reverse .content
             @media screen and (max-width: $breakpoint-medium)
                 margin-left: 0
                 margin-right: 0
                 width: 100%
-                img
-                    max-width: 100%
-
-
-
 </style>
