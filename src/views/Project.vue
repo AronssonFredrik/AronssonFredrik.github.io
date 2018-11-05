@@ -14,22 +14,15 @@
 import Vue from 'vue';
 import Jumbotron from '@/components/shared/Jumbotron.vue';
 import Section from '@/components/shared/Section.vue';
-<<<<<<< HEAD
-=======
 import Slideshow from '@/components/shared/Slideshow.vue';
 import Error from '@/views/404.vue';
->>>>>>> 23dcc6791dd8fe0bd73ab8d1b985c28e58b201be
 export default Vue.extend({
   name: 'Project',
   components: {
     Jumbotron,
-<<<<<<< HEAD
-    Section
-=======
     Section,
     Error,
     Slideshow
->>>>>>> 23dcc6791dd8fe0bd73ab8d1b985c28e58b201be
   },
   props: {
     client: Object
