@@ -4,7 +4,7 @@
         <div class="row" v-for="(skill, idx) in content.bundle" :key="idx">
             <div class="container ">
                 <h4>{{skill.title}}</h4>
-                <div class="flex-of-m">
+                <div class="flex-of-s">
                     <div v-for="(type, idx) in skill.type" :key="idx">
                         <img :src="type.img" v-if="type.img">
                         <div v-for="(level, idx) in type.level" :key="idx" class="level">
@@ -25,12 +25,12 @@
     </section>
 </template>
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 export default Vue.extend({
-    name: 'Skill',
-    props: {
-        content: Object,
-    }
+  name: "Skill",
+  props: {
+    content: Object
+  }
 });
 </script>
 <style lang="sass">
@@ -38,9 +38,11 @@ export default Vue.extend({
 #skills
     h4
         padding: $baseSize
-    .flex-of-m
+    .flex-of-s
         > div
             text-align: center
+            width: 50%
+            padding: $baseSize
             img
                 height: 120px
                 max-width: 100%
@@ -56,7 +58,7 @@ export default Vue.extend({
                 span
                     width: $baseSize
                     height: $baseSize * .5
-                    margin: ($baseSize / 6) ($baseSize / 4)
+                    margin: 0 ($baseSize / 4)
                     display: inline-block
                     border: $blue 1px solid
                     border-radius: 2px
