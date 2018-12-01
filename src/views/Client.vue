@@ -29,7 +29,6 @@ export default Vue.extend({
     }
   },
   mounted() {
-    console.log(this.client[this.$route.params.client].meta)
     if (this.$route.params.client !== "error") {
     var meta = this.client[this.$route.params.client].meta
       var desc = document.querySelector('meta[name="description"]');
