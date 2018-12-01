@@ -32,7 +32,7 @@ export default Vue.extend({
             classes: "frontpage",
             teaser: {
               heading: "Kaspersky Lab",
-              subHeading: "Working remotely as Web Producer"
+              subHeading: "Remotely as Front-End Developer"
             }
           },
           projects: {

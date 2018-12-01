@@ -1,8 +1,7 @@
 <template>
     <div>
-        <section v-for="(section, index, val) in content" class="showcase" :class="{reverse: index % 2 === 0}" :key="val">
-            <div class="container flex-of-m"
-            :class="section.class">
+        <section v-for="(section, index, val) in content" class="showcase" :class="section.class" :key="val">
+            <div class="container flex-of-m" :class="{reverse: index % 2 === 0}">
                 <div class="figure" v-if="section.img">
                     <img :src="section.img.path" :alt="section.img.alt" itemprop="image">
                 </div>

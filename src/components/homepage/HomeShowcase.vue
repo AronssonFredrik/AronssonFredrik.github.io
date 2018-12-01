@@ -27,18 +27,19 @@ export default Vue.extend({
 <style lang="sass">
 @import '../../assets/css/variables'
 .showcase
+    &.full-width .container > * 
+        width: 100%
     .container
+        > *
+            width: 50%
         .figure
-            margin-left: calc(-960px/2)
-            max-width: 100%
             img
+                margin-left: calc(-960px/2)
                 @media screen and (max-width: $breakpoint-medium)
                   width: calc(100% + 60px)
                   margin-left: calc(-60px/2)
                   max-width: none
                   float: none
-        .content
-            width: 50%
         &.reverse
             .figure
                 margin-right: calc(-960px/2)
