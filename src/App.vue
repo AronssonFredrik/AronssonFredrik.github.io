@@ -332,7 +332,7 @@ export default Vue.extend({
             timeRange: "11/2018 - present"
           },
           {
-            title: "Remote Front-End Developer",
+            title: "Front-End Developer",
             desc:
               "Working remotely managing and maintaining 40+ multi-regional websites and executing web content.",
             worksFor: "Kaspersky Lab",
@@ -364,6 +364,7 @@ export default Vue.extend({
               {
                 name: "Javascript",
                 img: require("@/assets/img/skills/icon-javascript.png"),
+                class: "js",
                 level: {
                   workExp: 4,
                   personalExp: 3,
@@ -373,6 +374,7 @@ export default Vue.extend({
               {
                 name: "Sass",
                 img: require("@/assets/img/skills/icon-sass.svg"),
+                class: "sass",
                 level: {
                   workExp: 3,
                   personalExp: 4,
@@ -382,6 +384,7 @@ export default Vue.extend({
               {
                 name: "AngularJS",
                 img: require("@/assets/img/skills/icon-angular.svg"),
+                class: "angular",
                 level: {
                   workExp: 2,
                   personalExp: 4,
@@ -391,8 +394,9 @@ export default Vue.extend({
               {
                 name: "Vue.js",
                 img: require("@/assets/img/skills/icon-vue.png"),
+                class: "vuejs",
                 level: {
-                  workExp: 1,
+                  workExp: 3,
                   personalExp: 3,
                   interest: 4
                 }

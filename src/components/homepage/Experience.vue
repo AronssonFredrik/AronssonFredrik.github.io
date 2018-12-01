@@ -4,10 +4,7 @@
         <div class="container flex-of-m">
             <div 
                 v-for="(exp, idx) in content.bundle" :key="idx">
-                <h4>
-                    <i class="lnr lnr-apartment" aria-hidden="true"></i>
-                    {{exp.title}}
-                </h4>
+                <h4>{{exp.title}}</h4>
                 <p>
                     <i class="lnr lnr-apartment" aria-hidden="true"></i>
                         {{exp.worksFor}}
@@ -44,6 +41,8 @@ export default Vue.extend({
 .experience
     .container
         text-align: center
+        &.flex-of-m
+            align-items: inherit
         div
             width: 33%
             @media screen and (max-width: $breakpoint-medium)

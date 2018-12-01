@@ -1,7 +1,15 @@
 <template>
     <footer>
         <div class="container">
-            <p v-for="text in $label.footer" :key="text">{{ text }}</p>
+            <p >{{ $label.footer.text }}</p>
+            <ul>
+                <li v-for="(connection, index) in $label.footer.connect" :key="index">
+                    <a :href="connection.url" target="_blank">
+                        <i :class="'fab fa-'+connection.class"></i>
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </footer>
 </template>

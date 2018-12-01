@@ -4,7 +4,6 @@
             <router-link to="/">
                 <h1>{{$label.siteName}}</h1>
             </router-link>
-            <router-link to="/kaspersky-lab">Kaspersky</router-link>
         </div>
     </header>
 </template>

@@ -5,7 +5,7 @@
             <div class="container ">
                 <div class="flex-of-s">
                     <div v-for="(type, idx) in skill.type" :key="idx">
-                        <img :src="type.img" v-if="type.img">
+                        <i :class="'fab fa-'+type.class"></i>
                         <div v-for="(level, idx) in type.level" :key="idx" class="level">
                             <p>{{$label.translation.experience[idx]}}</p>
                             <div class="experience" v-bind:class="['repeat-' + level, idx]">
@@ -45,6 +45,8 @@ export default Vue.extend({
             img
                 height: 120px
                 max-width: 100%
+            i
+                font-size: $baseSize * 10
         .level
             p
                 padding: ($baseSize / 2) 0 0
