@@ -3,18 +3,17 @@
         <h2 class="section-title">{{content.sectionTitle}}</h2>
         <div class="row" v-for="(skill, idx) in content.bundle" :key="idx">
             <div class="container ">
-                <h4>{{skill.title}}</h4>
-                <div class="flex-of-m">
+                <div class="flex-of-s">
                     <div v-for="(type, idx) in skill.type" :key="idx">
-                        <img :src="type.img" v-if="type.img">
+                        <i :class="'fab fa-'+type.class"></i>
                         <div v-for="(level, idx) in type.level" :key="idx" class="level">
                             <p>{{$label.translation.experience[idx]}}</p>
                             <div class="experience" v-bind:class="['repeat-' + level, idx]">
                                 <span v-for="eachLevel in $label.translation.level" :key="eachLevel"></span>
                                 <div class="tool-tip">
-                                    {{$label.translation.experience[idx] + ' in ['+
-                                    type.name
-                                    + ']: ' + $label.translation.level[level]}}
+                                    {{ $label.translation.level[level]}} 
+                                    experience in 
+                                    {{type.name}}
                                 </div>
                             </div>
                         </div>
@@ -25,12 +24,12 @@
     </section>
 </template>
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 export default Vue.extend({
-    name: 'Skill',
-    props: {
-        content: Object,
-    }
+  name: "Skill",
+  props: {
+    content: Object
+  }
 });
 </script>
 <style lang="sass">
@@ -38,12 +37,27 @@ export default Vue.extend({
 #skills
     h4
         padding: $baseSize
-    .flex-of-m
+    .flex-of-s
         > div
             text-align: center
-            img
-                height: 120px
-                max-width: 100%
+            width: 25%
+            padding: $baseSize
+            @media screen and (max-width: $breakpoint-medium)
+                width: 50%
+            @media screen and (max-width: $breakpoint-small)
+                width: 100%
+            i
+                font-size: $baseSize * 7
+                padding: $baseSize
+                &.fa-js
+                    color: #e8d44d
+                &.fa-sass
+                    color: #c6538c
+                &.fa-angular
+                    color: #df2e31
+                &.fa-vuejs
+                    color: #4fc08d
+                
         .level
             p
                 padding: ($baseSize / 2) 0 0
@@ -56,7 +70,7 @@ export default Vue.extend({
                 span
                     width: $baseSize
                     height: $baseSize * .5
-                    margin: ($baseSize / 6) ($baseSize / 4)
+                    margin: 0 ($baseSize / 4)
                     display: inline-block
                     border: $blue 1px solid
                     border-radius: 2px
@@ -68,7 +82,7 @@ export default Vue.extend({
                     background: $blue
                     position: absolute
                     top: -($baseSize * 3)
-                    left: 0
+                    left: 30%
                     padding: ($baseSize / 4) ($baseSize / 2)
                     border-radius: $baseSize
                     color: $lightBlue
@@ -76,7 +90,7 @@ export default Vue.extend({
                         content: ""
                         position: absolute
                         top: 100%
-                        left: 50%
+                        left: 30%
                         margin-left: -5px
                         border-width: 5px
                         border-style: solid

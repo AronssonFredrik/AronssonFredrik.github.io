@@ -16,50 +16,44 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { setInterval, setTimeout } from 'timers';
+import Vue from "vue";
+import { setInterval, setTimeout } from "timers";
 function frame(toGo: any) {
-    if (toGo != undefined){
-        if (document.documentElement.scrollTop != toGo) {
-            console.log(toGo)
-            document.documentElement.scrollTop+=1
-        }
+  if (toGo != undefined) {
+    if (document.documentElement.scrollTop != toGo) {
+      console.log(toGo);
+      document.documentElement.scrollTop += 1;
     }
+  }
 }
 export default Vue.extend({
-  name: 'Jumbotron',
+  name: "Jumbotron",
   props: {
-    content: Object,
+    content: Object
   },
-    created() {
-    },
-    methods: {
-        goTo: function(toSection: String) {
-            var scrollOffset = 93               // document.getElementById('header').outerHeight(true) <-- need to get offset from header
-            var component = []
-            for (var num in this.$parent.$children) {
-                component.push({
-                    name: this.$parent.$children[num].$options.name,
-                    offset: this.$parent.$children[num].$el.offsetTop
-                })
-            }
-            component.sort(
-                function(a,b){
-                    if (a.offset < b.offset)
-                        return -1
-                    if (a.offset > b.offset)
-                        return 1
-                    return 0
-                }
-            )
-            window.scroll({
-                top: component[1].offset - scrollOffset,
-                left: 0,
-                behavior: 'smooth'
-            })
-        }
+  created() {},
+  methods: {
+    goTo: function(toSection: String) {
+      var scrollOffset = 93; // document.getElementById('header').outerHeight(true) <-- need to get offset from header
+      var component = [];
+      for (var num in this.$parent.$children) {
+        component.push({
+          name: this.$parent.$children[num].$options.name,
+          offset: this.$parent.$children[num].$el.offsetTop
+        });
+      }
+      component.sort(function(a, b) {
+        if (a.offset < b.offset) return -1;
+        if (a.offset > b.offset) return 1;
+        return 0;
+      });
+      window.scroll({
+        top: component[1].offset - scrollOffset,
+        left: 0,
+        behavior: "smooth"
+      });
     }
-
+  }
 });
 </script>
 <style lang="sass">
@@ -79,6 +73,8 @@ main
             align-items: center
             background-repeat: no-repeat !important
             background-size: cover !important
+            .container
+                margin: 94px 0
             .subHeaderContent
                 text-align: center
                 color: $white

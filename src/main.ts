@@ -10,11 +10,19 @@ const siteConfig = {
 
 Vue.prototype.$siteName = 'Fredrik Aronsson'
 Vue.prototype.$label = {
-  footer: [
-    "Vat liable since October 2014",
-    "Website developed with vueJS, Sass, etc",
-    "Sent from App.vue"
-  ],
+  footer: {
+    text: "Let's get connected:",
+    connect: [
+      {
+        url: "https://www.linkedin.com/in/fredrik-aronsson",
+        class: "linkedin"
+      },
+      {
+        url: "https://github.com/AronssonFredrik",
+        class: "github-alt"
+      }
+    ]
+  },
   siteName: 'Fredrik Aronsson',
   readMore: 'Read more →',
   preview: 'Preview now ↝',

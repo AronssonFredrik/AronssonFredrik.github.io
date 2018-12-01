@@ -7,31 +7,44 @@
                 <h4>{{exp.title}}</h4>
                 <p>
                     <i class="lnr lnr-apartment" aria-hidden="true"></i>
-                    {{exp.worksFor}}
-                <br>
-                <i class="lnr lnr-earth" aria-hidden="true"></i>
-                    {{exp.workLocation}}
-                <br>
+                        {{exp.worksFor}}
+                        <br> 
+                    <i class="lnr lnr-earth" aria-hidden="true"></i>
+                        {{exp.workLocation}}
+                        <br>
                     <i class="lnr lnr-calendar-full" aria-hidden="true"></i>
-                    {{exp.timeRange}}
+                        {{exp.timeRange}}
                 </p>
                 <p>{{exp.desc}}</p>
+                    <Cta :button="exp.button" v-if="exp.button"/>
             </div>
         </div>
     </section> 
 </template>
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
+import Cta from "@/components/item/Cta.vue";
 
 export default Vue.extend({
-  name: 'Experience',
-  props: {
-    content: Object,
+  name: "Experience",
+  components: {
+      Cta
   },
+  props: {
+    content: Object
+  }
 });
 </script>
 <style lang="sass">
+@import '../../assets/css/variables'
+
 .experience
     .container
         text-align: center
+        &.flex-of-m
+            align-items: inherit
+        div
+            width: 33%
+            @media screen and (max-width: $breakpoint-medium)
+                width: 100%
 </style>

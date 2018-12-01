@@ -28,12 +28,17 @@ export default Vue.extend({
         this.$router.push('/')
     }
   },
-  created() {
+  mounted() {
+    if (this.$route.params.client !== "error") {
     var meta = this.client[this.$route.params.client].meta
-    var desc = document.querySelector('meta[name="description"]')
-    desc !== null 
-      ? desc.setAttribute("content", meta.description)
-      : document.createElement('meta').setAttribute("content", meta.description)
+      var desc = document.querySelector('meta[name="description"]');
+      document.title = meta.title + this.$route.meta.siteName;
+      desc !== null
+        ? desc.setAttribute("content", meta.description)
+        : document
+            .createElement("meta")
+            .setAttribute("content", meta.description);
+    }
   }
 });
 </script>
