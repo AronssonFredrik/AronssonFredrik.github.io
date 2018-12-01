@@ -40,13 +40,24 @@ export default Vue.extend({
     .flex-of-s
         > div
             text-align: center
-            width: 50%
+            width: 25%
             padding: $baseSize
-            img
-                height: 120px
-                max-width: 100%
+            @media screen and (max-width: $breakpoint-medium)
+                width: 50%
+            @media screen and (max-width: $breakpoint-small)
+                width: 100%
             i
-                font-size: $baseSize * 10
+                font-size: $baseSize * 7
+                padding: $baseSize
+                &.fa-js
+                    color: #e8d44d
+                &.fa-sass
+                    color: #c6538c
+                &.fa-angular
+                    color: #df2e31
+                &.fa-vuejs
+                    color: #4fc08d
+                
         .level
             p
                 padding: ($baseSize / 2) 0 0

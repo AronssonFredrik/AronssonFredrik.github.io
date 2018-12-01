@@ -11,7 +11,7 @@ const siteConfig = {
 Vue.prototype.$siteName = 'Fredrik Aronsson'
 Vue.prototype.$label = {
   footer: {
-    text: "Let's connect:",
+    text: "Let's get connected:",
     connect: [
       {
         url: "https://www.linkedin.com/in/fredrik-aronsson",
