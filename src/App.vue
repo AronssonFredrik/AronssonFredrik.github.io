@@ -337,7 +337,10 @@ export default Vue.extend({
               "Working remotely managing and maintaining 40+ multi-regional websites and executing web content.",
             worksFor: "Kaspersky Lab",
             workLocation: "Gothenburg",
-            timeRange: "09/2014 - 11/2018"
+            timeRange: "09/2014 - 11/2018",
+            button: {
+              href: "/kaspersky-lab"
+            }
           },
           {
             title: "Junior Web Developer",
@@ -345,7 +348,10 @@ export default Vue.extend({
               "Maintaining multi-regional sites at Kaspersky Lab and executing high standard User Interfaces (UI).",
             worksFor: "Kaspersky Lab",
             workLocation: "London",
-            timeRange: "02/2014 - 09/2014"
+            timeRange: "02/2014 - 09/2014",
+            button: {
+              href: "/kaspersky-lab"
+            }
           }
         ]
       },

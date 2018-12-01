@@ -33,9 +33,10 @@ export default Vue.extend({
             max-width: 100%
             img
                 @media screen and (max-width: $breakpoint-medium)
-                  width: calc(100% + 120px)
-                  margin-left: calc(-120px/2)
+                  width: calc(100% + 60px)
+                  margin-left: calc(-60px/2)
                   max-width: none
+                  float: none
         .content
             width: 50%
         &.reverse

@@ -3,7 +3,6 @@
         <h2 class="section-title">{{content.sectionTitle}}</h2>
         <div class="row" v-for="(skill, idx) in content.bundle" :key="idx">
             <div class="container ">
-                <h4>{{skill.title}}</h4>
                 <div class="flex-of-s">
                     <div v-for="(type, idx) in skill.type" :key="idx">
                         <img :src="type.img" v-if="type.img">
@@ -12,9 +11,9 @@
                             <div class="experience" v-bind:class="['repeat-' + level, idx]">
                                 <span v-for="eachLevel in $label.translation.level" :key="eachLevel"></span>
                                 <div class="tool-tip">
-                                    {{$label.translation.experience[idx] + ' in ['+
-                                    type.name
-                                    + ']: ' + $label.translation.level[level]}}
+                                    {{ $label.translation.level[level]}} 
+                                    experience in 
+                                    {{type.name}}
                                 </div>
                             </div>
                         </div>
@@ -70,7 +69,7 @@ export default Vue.extend({
                     background: $blue
                     position: absolute
                     top: -($baseSize * 3)
-                    left: 0
+                    left: 30%
                     padding: ($baseSize / 4) ($baseSize / 2)
                     border-radius: $baseSize
                     color: $lightBlue
@@ -78,7 +77,7 @@ export default Vue.extend({
                         content: ""
                         position: absolute
                         top: 100%
-                        left: 50%
+                        left: 30%
                         margin-left: -5px
                         border-width: 5px
                         border-style: solid

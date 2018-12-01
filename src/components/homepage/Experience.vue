@@ -6,25 +6,33 @@
                 v-for="(exp, idx) in content.bundle" :key="idx">
                 <h4>
                     <i class="lnr lnr-apartment" aria-hidden="true"></i>
-                    {{exp.worksFor}}
+                    {{exp.title}}
                 </h4>
                 <p>
-                <i class="lnr lnr-earth" aria-hidden="true"></i>
-                    {{exp.workLocation}}
-                <br>
+                    <i class="lnr lnr-apartment" aria-hidden="true"></i>
+                        {{exp.worksFor}}
+                        <br> 
+                    <i class="lnr lnr-earth" aria-hidden="true"></i>
+                        {{exp.workLocation}}
+                        <br>
                     <i class="lnr lnr-calendar-full" aria-hidden="true"></i>
-                    {{exp.timeRange}}
+                        {{exp.timeRange}}
                 </p>
                 <p>{{exp.desc}}</p>
+                    <Cta :button="exp.button" v-if="exp.button"/>
             </div>
         </div>
     </section> 
 </template>
 <script lang="ts">
 import Vue from "vue";
+import Cta from "@/components/item/Cta.vue";
 
 export default Vue.extend({
   name: "Experience",
+  components: {
+      Cta
+  },
   props: {
     content: Object
   }

@@ -40,9 +40,9 @@ export default Vue.extend({
       this.$route.params.client !== "error" &&
       this.$route.params.project !== "page-not-found"
     ) {
-      var meta = this.client[this.$route.params.client].projects[
-        this.$route.params.project
-      ].meta;
+      var meta = 
+        this.client[this.$route.params.client]
+        .projects[this.$route.params.project].meta;
       var desc = document.querySelector('meta[name="description"]');
       document.title = meta.title + this.$route.meta.siteName;
       desc !== null

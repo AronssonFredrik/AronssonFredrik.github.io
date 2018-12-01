@@ -1,6 +1,6 @@
 <template>
-    <div class="showcase">
-        <section v-for="(section, index, val) in content" :class="{reverse: index % 2 === 0}" :key="val">
+    <div>
+        <section v-for="(section, index, val) in content" class="showcase" :class="{reverse: index % 2 === 0}" :key="val">
             <div class="container flex-of-m"
             :class="section.class">
                 <div class="figure" v-if="section.img">
