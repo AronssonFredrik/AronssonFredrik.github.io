@@ -1,8 +1,8 @@
 <template>
-    <header id="header">
+    <header id="header" itemscope="" itemtype="http://schema.org/Person">
         <div class="container">
-            <router-link to="/">
-                <h1>{{$label.siteName}}</h1>
+            <router-link to="/" itemprop="url">
+                <h1 itemprop="name">{{$label.siteName}}</h1>
             </router-link>
         </div>
     </header>

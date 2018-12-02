@@ -2,6 +2,7 @@
     <section class="slideshow" v-if="content">
         <div
             v-for="(slideshow, index, val) in content" 
+            itemtype="https://schema.org/WebPage" itemscope
             :class="{reverse: index % 2 === 0, active: index == currentTab}" 
             :key="val"
         >

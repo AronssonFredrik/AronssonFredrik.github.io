@@ -1,5 +1,5 @@
 <template>
-    <div class="showcase">
+    <div class="showcase" itemscope itemtype="https://schema.org/WebPage">
         <!-- for each client -->
         <div v-for="(client, index) in content" :key="index">
             <!-- for each showcase -->

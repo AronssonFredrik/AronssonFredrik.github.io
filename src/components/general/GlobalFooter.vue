@@ -4,7 +4,7 @@
             <p >{{ $label.footer.text }}</p>
             <ul>
                 <li v-for="(connection, index) in $label.footer.connect" :key="index">
-                    <a :href="connection.url" target="_blank">
+                    <a :href="connection.url" target="_blank"  itemprop="sameAs">
                         <i :class="'fab fa-'+connection.class"></i>
                     </a>
                 </li>

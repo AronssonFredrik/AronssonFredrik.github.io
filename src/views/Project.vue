@@ -1,14 +1,14 @@
 <template>
-    <main>
-        <div v-for="(client, index) in client" v-if="index === $route.params.client" :key="index">
-            <div v-for="(project, index) in client.projects" v-if="index === $route.params.project" :key="index">
-                <Jumbotron :content="project.jumbotron"></Jumbotron>
-                <Slideshow :content="project.slideshow" />
-                <Section :content="project.sections"></Section>
-            </div>
-            <!-- if project doesn't exist -->
-        </div>
-    </main>
+      <main itemtype="https://schema.org/CreativeWork" itemscope>
+          <div v-for="(client, index) in client" v-if="index === $route.params.client" :key="index">
+              <div v-for="(project, index) in client.projects" v-if="index === $route.params.project" :key="index">
+                  <Jumbotron :content="project.jumbotron"></Jumbotron>
+                  <Slideshow :content="project.slideshow" />
+                  <Section :content="project.sections"></Section>
+              </div>
+              <!-- if project doesn't exist -->
+          </div>
+      </main>
 </template>
 <script lang="ts">
 import Vue from "vue";
