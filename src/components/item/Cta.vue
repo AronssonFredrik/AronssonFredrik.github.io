@@ -1,9 +1,9 @@
 <template>
     <p>
-        <a class="CTA" :href="button.href" :target="button.target" v-if="button.target == '_blank'">
+        <a class="CTA" :href="button.href" :target="button.target" v-if="button.target == '_blank'" itemprop="url">
             {{button.text || $label.preview}}
         </a>
-        <router-link class="CTA" :to="button.href" v-else>
+        <router-link class="CTA" :to="button.href" v-else itemprop="url">
             {{button.text || $label.readMore}}
         </router-link>
     </p>

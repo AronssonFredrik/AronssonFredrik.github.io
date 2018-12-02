@@ -1,5 +1,5 @@
 <template>
-    <div class="container flex-of-m" :class="{reverse: val % 2 === 0}">
+    <div class="container flex-of-m" :class="{reverse: val % 2 === 0}" itemscope itemtype="https://schema.org/WebPage">
         <div class="figure">
             <img :src="content.img" :alt="content.alt" itemprop="image">
         </div>

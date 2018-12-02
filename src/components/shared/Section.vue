@@ -3,14 +3,14 @@
         <section v-for="(section, index, val) in content" class="showcase" :class="section.class" :key="val">
             <div class="container flex-of-m" :class="{reverse: index % 2 === 0}">
                 <div class="figure" v-if="section.img">
-                    <img :src="section.img.path" :alt="section.img.alt" itemprop="image">
+                    <img :src="section.img.path" :alt="section.img.alt">
                 </div>
                 <div class="content">
                     <h2 itemprop="name">{{ section.title }}</h2>
-                    <div itemprop="description"> 
-                        <p v-for="p in section.paragraph" v-html="p" :key="p"> </p>
+                    <div> 
+                        <p v-for="(p, i) in section.paragraph" v-html="p" :key="i" itemprop="description"> </p>
                         <ul v-if="section.list">
-                            <li v-for="list in section.list" v-html="list" :key="list"></li>
+                            <li v-for="(list, i) in section.list" v-html="list" :key="i"></li>
                         </ul>
                     </div>
                     <Cta :button="section.button" v-if="section.button"/>
