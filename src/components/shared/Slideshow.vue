@@ -10,7 +10,7 @@
                 <div class="figure" v-if="slideshow.img">
                     <img :src="slideshow.img.path" :alt="slideshow.img.alt" itemprop="image">
                 </div>
-                <div>
+                <div class="content">
                     <h2 itemprop="name">{{ slideshow.title }}</h2>
                     <div itemprop="description"> 
                         <p v-for="p in slideshow.paragraph" v-html="p" :key="p"/>
@@ -85,6 +85,17 @@ export default Vue.extend({
         padding-bottom: 6vh
         &.active
             display: block
+    .container 
+        > div
+            width: 50%
+            @media screen and (max-width: $breakpoint-medium)
+                width: 100%
+                &.content
+                    text-align: center
+                &.figure 
+                    img 
+                        float: none
+                        max-width: 100%
     nav
         text-align: center
         position: absolute
