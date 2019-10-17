@@ -2,9 +2,11 @@
   "name": "portfolio-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aronssonfredrik.github.io/",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "sass-resources-loader": "^1.3.3",
@@ -14,6 +16,7 @@
   "devDependencies": {
     "@vue/cli-plugin-typescript": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "typescript": "^3.0.0",

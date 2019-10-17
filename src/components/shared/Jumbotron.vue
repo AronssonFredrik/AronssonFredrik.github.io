@@ -39,7 +39,7 @@ export default Vue.extend({
       for (var num in this.$parent.$children) {
         component.push({
           name: this.$parent.$children[num].$options.name,
-          offset: this.$parent.$children[num].$el.offsetTop
+          offset: this.$parent.$children[num].$el.clientHeight
         });
       }
       component.sort(function(a, b) {
