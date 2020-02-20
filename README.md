@@ -1,17 +1,4 @@
-# portfolio-project
-Development of my personal website portfolio, using Vue.
+# Web portfolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dffbdfea-5ed5-4077-9c06-37f0839f4e4e/deploy-status)](https://app.netlify.com/sites/pedantic-bartik-241fca/deploys)
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
+My personal website portfolio, [visit it →](https://www.fredrikaronsson.com).
